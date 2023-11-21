@@ -30,21 +30,19 @@ const Nav = () => {
           <p>About</p>
         </NavLink>
         <Link to={"/craft"}>
-          <p>
-            <div
-              className={
-                "w-[35px] h-[35px] flex items-center justify-center rounded-[30px] bg-blue-500 border-2 border-sky-600"
-              }
-            >
-              <CiShoppingCart className={"text-white font-bold"} />
-            </div>
-          </p>
+          <div
+            className={
+              "w-[35px] h-[35px] flex items-center justify-center rounded-[30px] bg-blue-500 border-2 border-sky-600"
+            }
+          >
+            <CiShoppingCart className={"text-white font-bold"} />
+          </div>
         </Link>
       </div>
       <div
         onClick={() => setActive(!active)}
         className={
-          "w-[40px] h-[40px] relative rounded-[35px] shadow-2xl border-neutral-500 bg-neutral-500 z-20 overflow-hidden card_shadow block md:hidden"
+          "w-[40px] h-[40px] relative rounded-[35px] shadow-2xl border-neutral-500 bg-neutral-500 z-30 overflow-hidden card_shadow block md:hidden"
         }
       >
         <div

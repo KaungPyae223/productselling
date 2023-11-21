@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
-import { slide } from "../Animate/Animate.js";
+import { slide } from "../../Animate/Animate.js";
 
 const Link = ({ link, title, i }) => {
   return (

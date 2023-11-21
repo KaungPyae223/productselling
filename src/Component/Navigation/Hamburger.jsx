@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
-import { menuslide } from "../Animate/Animate.js";
+import { menuslide } from "../../Animate/Animate.js";
 import Link from "./Link.jsx";
 import Curve from "./Curve.jsx";
 
@@ -31,7 +31,7 @@ const Hamburger = () => {
       animate={"enter"}
       exit={"exit"}
       className={
-        "fixed w-[320px] h-full bg-gray-700 top-0 right-0 flex py-3 items-center justify-start gap-28 flex-col"
+        "fixed w-[320px] h-full bg-gray-700 top-0 right-0 flex py-3 items-center justify-start gap-28 flex-col z-20"
       }
     >
       <Curve />
