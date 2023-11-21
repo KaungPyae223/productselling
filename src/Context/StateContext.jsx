@@ -21,7 +21,6 @@ export const StateContextProvider = ({ children }) => {
   };
 
   const [productlist, setproductlist] = useState([]);
-
   const initialstate = {
     items: [],
     craft: [],

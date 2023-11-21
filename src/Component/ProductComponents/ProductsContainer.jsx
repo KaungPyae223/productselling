@@ -7,7 +7,6 @@ const ProductsContainer = () => {
   const {
     state: { items },
   } = createcontextCustom();
-  console.log(items);
   return (
     <div
       className={

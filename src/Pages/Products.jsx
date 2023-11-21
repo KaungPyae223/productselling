@@ -1,13 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { PageChange } from "../Animate/Animate.js";
-import HomeIntro from "../Component/HomePage/HomeIntro.jsx";
-import HomeViewCount from "../Component/HomePage/HomeViewCount.jsx";
-import Title from "../Component/Title.jsx";
-import ProductsContainer from "../Component/ProductComponents/ProductsContainer.jsx";
-import OurServices from "../Component/HomePage/OurServices.jsx";
-import Reviews from "../Component/HomePage/Reviews.jsx";
-import Footer from "../Component/Footer.jsx";
+import ProductSearch from "../Component/ProductsPage/ProductSearch.jsx";
+import Categories from "../Component/ProductsPage/Categories.jsx";
+import AllProductsContainer from "../Component/ProductComponents/AllProductsContainer.jsx";
 
 const Products = () => {
   return (
@@ -16,7 +12,11 @@ const Products = () => {
       initial={"initial"}
       exit={"exit"}
       animate={"enter"}
-    ></motion.div>
+    >
+      <ProductSearch />
+      <Categories />
+      <AllProductsContainer />
+    </motion.div>
   );
 };
 

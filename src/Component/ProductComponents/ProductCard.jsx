@@ -26,14 +26,12 @@ const ProductCard = (props) => {
             className={"h-[200px] object-contain bg-black"}
           />
           <div className={"p-3"}>
-            <p className={"font-link font-bold"}>{title}</p>
+            <p className={"font-link font-bold line-clamp-1"}>{title}</p>
             <div>
               <Stars rating={rating} />
             </div>
-            <p className={"font-paragraph text-sm mt-3"}>
-              {description.length > 100
-                ? description.substring(0, 50) + "..."
-                : description}
+            <p className={"font-paragraph text-sm mt-3 line-clamp-2"}>
+              {description}
             </p>
           </div>
           <div
