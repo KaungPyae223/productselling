@@ -4,6 +4,7 @@ import { PageChange } from "../Animate/Animate.js";
 import ProductSearch from "../Component/ProductsPage/ProductSearch.jsx";
 import Categories from "../Component/ProductsPage/Categories.jsx";
 import AllProductsContainer from "../Component/ProductComponents/AllProductsContainer.jsx";
+import Pagination from "../Component/ProductsPage/Pagination.jsx";
 
 const Products = () => {
   return (
@@ -16,6 +17,7 @@ const Products = () => {
       <ProductSearch />
       <Categories />
       <AllProductsContainer />
+      <Pagination />
     </motion.div>
   );
 };

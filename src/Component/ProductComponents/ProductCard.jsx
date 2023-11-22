@@ -34,9 +34,7 @@ const ProductCard = (props) => {
               {description}
             </p>
           </div>
-          <div
-            className={"mt-1 pt-2 px-3 border-t border-t-neutral-500 mt-auto"}
-          >
+          <div className={"pt-2 px-3 border-t border-t-neutral-500 mt-auto"}>
             <p className={"text-xl font-medium"}>{price} $</p>
             <button
               className={

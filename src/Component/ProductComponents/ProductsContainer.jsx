@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { createcontextCustom } from "../../Context/StateContext.jsx";
 import ProductCard from "./ProductCard.jsx";
 import Stars from "./Stars.jsx";
+import SkeletonLoadingProductCard from "./SkeletonLoadingProductCard.jsx";
 
 const ProductsContainer = () => {
   const {
