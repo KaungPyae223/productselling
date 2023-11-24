@@ -5,9 +5,9 @@ import { CiTwitter } from "react-icons/ci";
 const Footer = () => {
   return (
     <div className={"mt-12 w-full bg-gray-950"}>
-      <div className={"w-4/5 pt-12 mx-auto"}>
+      <div className={"md:w-4/5 pt-12 mx-5 md:mx-auto"}>
         <div className={"flex flex-wrap items-start"}>
-          <div className={"w-1/2"}>
+          <div className={"md:w-1/2"}>
             <p className={"text-3xl font-bold text-blue-500"}>Grab & Go</p>
             <div className={"text-white"}>
               <p className={"mt-6 text-xl font-medium"}>About Us</p>
@@ -29,7 +29,7 @@ const Footer = () => {
 
           <div
             className={
-              "w-1/2 text-white flex flex-row justify-evenly items-start"
+              "md:w-1/2 gap-14 md:gap-0 mt-8 md:mt-0 text-white flex flex-row justify-between md:justify-evenly md:items-start"
             }
           >
             <div>
@@ -53,7 +53,7 @@ const Footer = () => {
         </div>
       </div>
       <div className={"w-full mt-8 border-t border-t-neutral-500"}>
-        <div className={"w-4/5 mx-auto py-3 text-white"}>
+        <div className={"md:w-4/5 mx-5 md:mx-auto py-3 text-white"}>
           <p className={"w-fit ms-auto "}>
             2023 © Grab&Go | All Right Reversed
           </p>

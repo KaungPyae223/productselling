@@ -6,7 +6,7 @@ import { textLeft } from "../../Animate/Animate.js";
 const OurServicesCard = ({ title, icon, index }) => {
   return (
     <motion.div
-      className={"bg-sky-400 rounded-xl p-2 relative"}
+      className={"bg-sky-400 col-span-3 md:col-span-1 rounded-xl p-2 relative"}
       variants={textLeft}
       initial={"initial"}
       whileInView={"enter"}

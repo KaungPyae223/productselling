@@ -4,7 +4,7 @@ const Title = ({ title }) => {
   return (
     <div
       className={
-        "mt-12 w-4/5 mx-auto flex flex-row justify-center items-center gap-3"
+        "mt-12 md:w-4/5 mx-5 md:mx-auto flex flex-row justify-center items-center gap-3"
       }
     >
       <div className={"pt-0.5 bg-neutral-400 grow"}></div>

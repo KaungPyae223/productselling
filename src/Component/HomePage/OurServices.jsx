@@ -6,7 +6,11 @@ import { LuAlarmClock } from "react-icons/lu";
 
 const OurServices = () => {
   return (
-    <div className={"w-4/5 mx-auto grid grid-cols-3 gap-3 mt-12"}>
+    <div
+      className={
+        "md:w-4/5 mx-5 md:mx-auto grid grid-cols-3 gap-10 md:gap-3 mt-12"
+      }
+    >
       <OurServicesCard
         title={"Our Services"}
         icon={<TbTruckDelivery />}

@@ -10,5 +10,5 @@ export default {
       },
     },
   },
-  plugins: [import("@tailwindcss/line-clamp")],
+  plugins: [require("@tailwindcss/line-clamp"), require("tailwind-scrollbar")],
 };

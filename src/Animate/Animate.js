@@ -92,3 +92,25 @@ export const Categoryfade = {
     transition: { duration: 0.3, ease: [0.33, 1, 0.68, 1], delay: 0.1 * i },
   }),
 };
+export const CraftAppear = {
+  initial: {
+    x: "100%",
+  },
+  enter: {
+    x: 0,
+    transition: { duration: 0.3, ease: [0.33, 1, 0.68, 1] },
+  },
+  exit: {
+    x: "100%",
+    transition: { duration: 0.3, ease: [0.33, 1, 0.68, 1] },
+  },
+};
+export const CraftItemAnimation = {
+  initial: {
+    x: 300,
+  },
+  enter: (i) => ({
+    x: 0,
+    transition: { duration: 0.3, ease: [0.33, 1, 0.68, 1], delay: 0.1 * i },
+  }),
+};

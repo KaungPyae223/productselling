@@ -3,13 +3,14 @@ import { Link, NavLink } from "react-router-dom";
 import { CiShoppingCart } from "react-icons/ci";
 import Hamburger from "./Hamburger.jsx";
 import { AnimatePresence } from "framer-motion";
+import { createcontextCustom } from "../../Context/StateContext.jsx";
 const Nav = () => {
   const [active, setActive] = useState(false);
-
+  const { setCraftOpen } = createcontextCustom();
   return (
     <div
       className={
-        "w-100 mx-5  md:w-4/5 md:mx-auto py-4 border-b border-b-amber-400 flex justify-between items-center"
+        "mx-5  md:w-4/5 md:mx-auto py-4 border-b border-b-amber-400 flex justify-between items-center"
       }
     >
       <Link to={"/"}>
@@ -29,15 +30,17 @@ const Nav = () => {
         <NavLink to={"/about"}>
           <p>About</p>
         </NavLink>
-        <Link to={"/craft"}>
-          <div
-            className={
-              "w-[35px] h-[35px] flex items-center justify-center rounded-[30px] bg-blue-500 border-2 border-sky-600"
-            }
-          >
-            <CiShoppingCart className={"text-white font-bold"} />
-          </div>
-        </Link>
+
+        <div
+          className={
+            "w-[35px] h-[35px] flex items-center justify-center rounded-[30px] bg-blue-500 border-2 border-sky-600 relative"
+          }
+          onClick={() => {
+            setCraftOpen(true);
+          }}
+        >
+          <CiShoppingCart className={"text-white font-bold"} />
+        </div>
       </div>
       <div
         onClick={() => setActive(!active)}

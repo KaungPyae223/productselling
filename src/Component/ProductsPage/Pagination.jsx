@@ -7,7 +7,6 @@ const Pagination = () => {
     state: { total },
   } = createcontextCustom();
   const totalpages = Math.ceil(total / 28);
-  console.log(totalpages);
   return (
     <div className={"w-fit mx-auto my-4 flex flex-row gap-2 items-center"}>
       {Array.from({ length: totalpages }, (_, i) => (

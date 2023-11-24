@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { FadeIn } from "../../Animate/Animate.js";
 import Stars from "./Stars.jsx";
 import { RxCross1 } from "react-icons/rx";
+import { createcontextCustom } from "../../Context/StateContext.jsx";
 const ItemDetailed = (props) => {
   const {
     id,
@@ -18,7 +19,30 @@ const ItemDetailed = (props) => {
   } = props;
 
   const [ImageSrc, setSrc] = useState(thumbnail);
+  const { dispatch, setMainTotal, MainTotal, state } = createcontextCustom();
+  const { craft } = state;
 
+  const AlreadyCrafted = craft.some((el) => el.id === id);
+  console.log(craft);
+  const AddtoCraft = () => {
+    if (AlreadyCrafted) {
+      const { Quantity } = craft.find((el) => (el.id = id));
+      setMainTotal(MainTotal - Quantity * price);
+      dispatch({ type: "removeCraft", id: id });
+    } else {
+      dispatch({
+        type: "addCraft",
+        payload: {
+          id: id,
+          thumbnail: thumbnail,
+          title: title,
+          price: price,
+          Quantity: 1,
+        },
+      });
+      setMainTotal(MainTotal + price);
+    }
+  };
   return (
     <motion.div
       variants={FadeIn}
@@ -31,7 +55,7 @@ const ItemDetailed = (props) => {
     >
       <motion.div
         layoutId={id}
-        className=" bg-white card_shadow rounded-xl relative flex flex-row overflow-hidden"
+        className=" bg-white card_shadow rounded-xl relative flex flex-col md:flex-row mx-5 overflow-hidden"
       >
         <div className={"flex flex-col"}>
           <img
@@ -76,15 +100,20 @@ const ItemDetailed = (props) => {
             <Stars rating={rating} />
             <p className={"font-medium"}>{rating} / 5</p>
           </div>
-          <p className={"max-w-[350px] mt-3"}>{description}</p>
+          <p className={"max-w-[350px] mt-3 overflow-y-scroll max-h-16"}>
+            {description}
+          </p>
           <div className={"border-t border-t-neutral-300 pt-1 mt-auto"}>
             <p className={"text-xl font-medium"}>{price} $</p>
             <button
-              className={
-                "w-full py-1.5 bg-black text-white rounded-lg mb-2 mt-1"
-              }
+              className={`${
+                AlreadyCrafted
+                  ? "bg-green-400 text-black"
+                  : "bg-black text-white"
+              } w-full py-1.5  rounded-lg mb-2 mt-1`}
+              onClick={AddtoCraft}
             >
-              Add to Craft
+              {AlreadyCrafted ? "Remove from Craft" : "Add to Craft"}
             </button>
           </div>
         </div>

@@ -5,13 +5,13 @@ import { textLeft, textRight } from "../../Animate/Animate.js";
 
 const HomeIntro = () => {
   return (
-    <div
-      className={
-        "h-[90vh] w-full md:w-4/5 mx-auto overflow-hidden align-middle"
-      }
-    >
-      <div className={"flex gap-12 py-16 h-full flex-row"}>
-        <div className={"basis-2/5 self-center"}>
+    <div className={"h-[90vh] md:w-4/5 mx-5 md:mx-auto overflow-hidden"}>
+      <div
+        className={
+          "flex py:6 gap-12 md:py-16 h-full flex-col md:flex-row items-center justify-center"
+        }
+      >
+        <div className={"md:basis-2/5 self-center"}>
           <motion.p
             variants={textLeft}
             whileInView={"enter"}
@@ -37,7 +37,7 @@ const HomeIntro = () => {
         </div>
 
         <motion.div
-          className={"basis-3/5"}
+          className={"md:basis-3/5"}
           variants={textRight}
           whileInView={"enter"}
           initial={"initial"}

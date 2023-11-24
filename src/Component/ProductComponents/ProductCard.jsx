@@ -14,12 +14,11 @@ const ProductCard = (props) => {
           className={
             "rounded-lg overflow-hidden border border-neutral-300 card_shadow flex flex-col"
           }
-          layoutId={id}
           variants={CardUp}
           whileInView={"enter"}
           initial={"initial"}
+          layoutId={id}
           custom={index}
-          viewport={{ once: true }}
         >
           <img
             src={thumbnail}

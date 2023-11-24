@@ -11,7 +11,7 @@ const ProductsContainer = () => {
   return (
     <div
       className={
-        "mt-12 w-4/5 mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3"
+        "mt-12 md:w-4/5 mx-5 md:mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3"
       }
     >
       {items.slice(0, 4).map((el, i) => {
